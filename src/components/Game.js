@@ -14,9 +14,10 @@ import '../css/Popup.css';
 import '../css/Game.css';
 import '../css/Sidebar.css';
 import Trophie from '../img/trophie.svg'
-import useWindowSize from '../utils/WindowSize'
+import {getSize} from '../utils/WindowSize'
 import Confetti from 'react-confetti'
 import Popup from './Popup'
+import Logo from '../img/logo.svg'
 
 let socket;
 const ENDPOINT = process.env.NODE_ENV !== 'production' ? process.env.REACT_APP_SERVER_URL_DEV : process.env.REACT_APP_SERVER_URL_PRODUCTION
@@ -39,7 +40,6 @@ const Game = ({location}) => {
 	const [showSidebar, setShowSidebar] = useState(false)
 	const [spymasterView, setSpymasterView] = useState(false)
 	const [language, setlanguage] = useState('en')
-	const { width, height } = useWindowSize()
 	const [showPopup, setShowPopup] = useState(true)
 
 	//SETUP SOCKET
@@ -134,7 +134,6 @@ const Game = ({location}) => {
 		return <Redirect to='/' />
 	}
 
-
 	return (
 
 		<React.Fragment>
@@ -159,8 +158,8 @@ const Game = ({location}) => {
 							}
 
 				{puzzle.winner && <Confetti
-								      width={width}
-								      height={height}
+								      width={getSize().width}
+								      height={getSize().height}
 								      recycle={false}
 								    />
 				}
@@ -198,9 +197,9 @@ const Game = ({location}) => {
 										</defs>
 
 					
-										<text className={`score red`} x="27%" y="94%">{puzzle.points.red}</text>  
+										<text className={`score red`} x="20%" y="94%">{puzzle.points.red}</text>  
 										<text className={`score neutral`} x="50%" y="94%">-</text>  
-										<text className={`score blue`} x="73%" y="94%">{puzzle.points.blue}</text>  
+										<text className={`score blue`} x="80%" y="94%">{puzzle.points.blue}</text>  
 									</svg>  
 									
 								</div>
@@ -235,14 +234,14 @@ const Game = ({location}) => {
 
 					<div className="bottom-bar">
 					<div>
-						{(user.spymaster && !puzzle.winner) && <div className="setting">
+					 <div className="setting">
 													<label htmlFor="spymaster-switch">Spymaster's view</label> 
 													<Switch id='spymaster-switch' onChange={(e) => setSpymasterView(e)} checked={spymasterView} {...switchProps}/>
-												</div>}
+												</div>
 					</div>
 
 					<div className="center">
-						{!puzzle.winner && <Button text={'End Turn'} onClick={endTurn} icon={faChevronRight} />}
+						 <Button text={'End Turn'} onClick={endTurn} icon={faChevronRight} />
 					</div>
 					<div></div>
 					</div>
@@ -257,9 +256,14 @@ const Game = ({location}) => {
 			<div id={"sidebar"} className={`${showSidebar ? 'show' : ''}`}>
 
 
-				<InfoBar room={room} />
+				<div className="logo-wrapper"><img src={Logo} alt="logo" className="logo" /></div>
 				<div className="sidebar-content">
 				<div>
+
+					<SidebarSection title='Room' variant='space-between'>
+						{room}
+					</SidebarSection>
+
 					<SidebarSection title='Online players' className='online-users' scroll>
 						<Users users={users} me={user.name}/>
 					</SidebarSection>

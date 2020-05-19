@@ -48,7 +48,7 @@
 #sidebar hr {
   border: none;
   border-top: #262b4d 1px solid;
-  margin:20px 0;
+  margin:15px 0;
   box-shadow: 0px -1px 0 #171a2f;
 }
 
@@ -60,13 +60,13 @@
 }
 
 #sidebar .log-messages {
-  height: 300px;
+  height: 200px;
   overflow-y: scroll;
   width:100%;
 }
 
 #sidebar .online-users {
-  max-height: 150px;
+  max-height: 100px;
   height:150px;
   overflow-y: scroll;
   width:100%;
@@ -175,6 +175,10 @@
 
 
 @media only screen and (max-width: 1024px) {
+  
+  #sidebar .logo-wrapper {
+    display: none;
+  }
 
   #sidebar {
     position: absolute;
@@ -185,6 +189,12 @@
     z-index:10;
     background-color: var(--secondary-color);
     border-left: 1px solid #262b4d;
+  }
+
+  #sidebar .online-users {
+    height:auto;
+    overflow-y: scroll;
+    width:100%;
   }
   
   .sidebar-content {

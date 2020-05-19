@@ -1,7 +1,7 @@
 header {
 	height:120px;
 	width:100%;
-	display: flex;
+	display: none;
 	justify-content: space-between;
 	align-items: center
 }
@@ -15,14 +15,22 @@ header #menu {
 }
 
 .logo-wrapper {
-  padding: 10px
+  	padding: 20px;
+  	display: flex;
+	justify-content: center;
 }
 
 .logo-wrapper .logo {
 	width:190px;
 }
 
+
+
 @media only screen and (max-width: 1024px) {
+
+header {
+    display: flex;
+  }
 
 header #menu {
     display: block;

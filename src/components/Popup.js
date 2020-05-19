@@ -10,15 +10,19 @@ const Popup = ({children, handleClose}) => {
 		setShow(true)
 	}, [])
 
-	useEffect( () => {
-		if(show) {
-			document.body.style.overflow = 'hidden';
-		} 
-	}, [show])
+	// useEffect( () => {
+	// 	if(show) {
+	// 		document.body.className = 'modal-open';
+	// 		window.scrollTo(0, 0);
+	// 	} 
+	// }, [show])
 
 	const handleHide = () => {
 		setShow(false);
-		setTimeout(function(){ handleClose(); document.body.style.overflowY = 'unset'; }, 1000);
+		setTimeout(function(){ 
+			handleClose(); 
+			// document.body.className = ''; 
+		}, 1000);
 		
 	}
 

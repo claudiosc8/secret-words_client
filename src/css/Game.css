@@ -6,7 +6,7 @@
   max-width: 1280px;
   width:100%;
   justify-content: center;
-  padding-top: 4%;
+  padding-top: 6%;
   animation-name: fade;
   animation-duration: .5s;
 }
@@ -154,8 +154,8 @@
 }
 
 .scores svg {
-    width: 300px;
-    height:150px;
+    width: 230px;
+    height: 150px;
 }
 
 .scores text.score {
@@ -259,6 +259,33 @@
   color:var(--blue-light);
 }
 
+@media only screen and (max-width: 1440px) {
+  
+  .gameContainer {
+    max-width: 1024px;
+    padding-top: 20px;
+  }
+  
+  .card {
+    padding:35px 0;
+  }
+
+  .card .confirm-selection {
+    bottom: 12px;
+}
+
+
+}
+
+@media only screen and (max-width: 1280px) {
+  
+  .gameContainer {
+    max-width: 920px;
+    padding-top: 10px;
+  }
+
+}
+
 @media only screen and (max-width: 1024px) {
   
   .container {
@@ -305,7 +332,7 @@
   }
 
   .card .confirm-selection {
-    bottom: 15px;
+      bottom: 12px;
   }
   
   .card .confirm-selection:before {

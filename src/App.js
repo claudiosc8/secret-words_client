@@ -10,7 +10,7 @@ import './css/Button.css';
 const App = () => {
 
   return (
-    <Router>
+    <Router basename={'/secret-words/'}>
       <Route path='/' exact component={Join} />
       <Route path='/play/:room' component={Game} />
       <Route path='/login' component={Login} />
