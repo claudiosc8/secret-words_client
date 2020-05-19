@@ -1,0 +1,103 @@
+.popup-wrapper, .popup-wrapper > .background {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+}
+
+.popup-wrapper > .background {
+    background-color: rgba(0,0,0,.8);
+    backdrop-filter:blur(2px);
+    z-index: 1;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.popup-wrapper.active > .background {
+  animation-name: fade;
+  animation-duration: 1s;
+  opacity: 1;
+}
+
+.popup-wrapper > .animation {
+  width:100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 2;
+}
+
+.popup-wrapper > .popup {
+  max-width: 500px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-height: 330px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+.popup-wrapper.active > .popup {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 1s ease;
+  animation-name: popup;
+  animation-duration: 1s;
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: translateY(20px)
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px)
+  }
+}
+
+.popup-wrapper > .popup .popup-inner {
+  position: relative;
+  width:100%;
+  height: 100%;
+  padding: 30px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-wrapper > .popup h2 {
+  font-size:45px;
+  margin:20px 0 0;
+  text-align: center;
+}
+
+.popup-wrapper > .popup h2.blue {
+  color:var(--blue-dark);
+}
+
+.popup-wrapper > .popup h2.red {
+  color:var(--red-dark);
+}
+
+.popup-wrapper > .popup p {
+    margin: 0;
+    color:#aaa;
+    padding: 15px 0 20px;
+}
+
+.popup-wrapper > .popup .popup-image {
+    margin-top: -100px;
+    width: 150px;
+}
+

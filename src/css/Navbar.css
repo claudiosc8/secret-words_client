@@ -1,0 +1,31 @@
+header {
+	height:120px;
+	width:100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center
+}
+
+header #menu {
+	padding:20px;
+	font-size:36px;
+	display: none;
+	color:#fff;
+	cursor: pointer;
+}
+
+.logo-wrapper {
+  padding: 10px
+}
+
+.logo-wrapper .logo {
+	width:190px;
+}
+
+@media only screen and (max-width: 1024px) {
+
+header #menu {
+    display: block;
+  }
+
+}

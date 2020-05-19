@@ -1,0 +1,136 @@
+.table-wrapper {
+	max-width: 600px;
+    margin: 0 auto;
+}
+
+#table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #fff;
+    background-color: var(--secondary-color);
+    border-collapse: separate;
+    border-spacing: 0px;
+}
+
+#table td, #table th, #table thead th {
+    border-color: #262b4d;
+}
+
+#table td, #table th {
+	padding: .75rem;
+    vertical-align: top;
+    border: 1px solid #262b4d;
+}
+
+#table td.input-field {
+    padding: 0;
+}
+
+#table td input {
+    padding: .75rem;
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+#table td input:focus {
+    outline: solid 2px #512da8;
+}
+
+#table tr:hover {
+    background-color: #191c31;
+}
+
+#table tr.selected {
+    background-color: #512da8;
+}
+
+.pagination {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+    justify-content: center;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #ffffff;
+    background-color: #1d1e33;
+    border: 1px solid #262b4d;
+}
+
+.page-link:hover {
+    text-decoration: none;
+    background-color: #191c31;
+}
+
+.page-link:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.page-item.disabled .page-link {
+    color: #464646;
+    pointer-events: none;
+    cursor: auto;
+    background-color: #1d1e33;
+    border-color: #3b3e65;
+}
+
+.page-item:first-child .page-link {
+    margin-left: 0;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+
+.page-item.active .page-link {
+    color: #fff;
+    background-color: #512da8;
+    border-color: #262b4d;
+}
+
+.page-item:last-child .page-link {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+.input {
+	font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.input.search {
+	border-radius: 50px;
+}
+
+.table-wrapper .toolbar {
+	display: flex;
+}
+
+.table-wrapper .toolbar > div {
+	flex-basis: 50%;
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+}
+
+.popup textarea {
+	width:100%;
+	border-radius:5px;
+	resize: vertical;
+	min-height:60%;
+}

@@ -1,0 +1,201 @@
+.button {
+  background-color: var(--secondary-color);
+  padding:20px 40px;
+  color:#fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  margin:10px 0;
+  text-decoration: none;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: var(--secondary-color-hover);
+}
+
+.button:active {
+  background-color:#14142f;
+}
+
+.button svg {
+  margin-left:10px;
+}
+
+
+.button-outer {
+  padding:6px;
+  background-color: #4527a022;
+  display: inline-block;
+  border-radius: 50px;
+  box-shadow: inset 1px 1px 0px 0px #ffffff22;
+  cursor: pointer;
+  margin-bottom:10px;
+}
+
+.button-inner {
+  background-color: #512da8;
+  background-image: linear-gradient(to top,  #4527a0, #5e35b1);
+  padding: 25px 45px;
+  border-radius:50px;
+  color: #fff;
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+  text-shadow: 0 2px 1px #4527a0;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border: none;
+  margin: 0;
+  cursor: pointer;
+  box-shadow: inset 0 1px 0px 0px #ffffff55, 
+              inset 0 0 10px 8px #512da8,
+              0 15px 10px 0 #00000055;
+              ;
+}
+
+.button-inner:focus {
+    outline: none
+}
+
+.button-inner:hover {
+  background-image: linear-gradient(to top,  #4b2aad, #6539bd);
+}
+
+.button-inner:active {
+  background-image: linear-gradient(to top,  #3f2492, #5631a3);
+}
+
+.button-inner svg {
+  margin-left:10px;
+}
+
+.button-outer.empty .button-inner {
+  width:100%;
+  height:100%;
+  padding: 0;
+}
+
+.button-outer.fullwidth .button-inner {
+  width:100%;
+  padding-right:5px;
+  padding-left: 5px;
+}
+
+.button-outer.outline {
+  box-shadow: inset 1px 1px 0px 0px #ffffff22, inset 0px 0px 0px 5px #4527a0;
+}
+
+.button-outer.outline .button-inner {
+  background-image: none;
+  box-shadow: none;
+  background-color: transparent;
+  padding-top:17px;
+  padding-bottom: 17px;
+  text-shadow: none;
+}
+
+.button-outer.outline:hover {
+  background-color: #4527a0;
+}
+
+.close-btn {
+  width:60px;
+  height:60px;
+  position: absolute;
+  right:-30px;
+  top:-30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+.close-btn:after, .close-btn:before {
+  content: '';
+  width:2px;
+  height:20px;
+  background-color: #fff;
+  position: absolute;
+  top: 19px;
+  left: 29px;
+  border-radius: 5px
+}
+
+.close-btn:after {
+  transform: rotate(45deg);
+}
+
+.close-btn:before {
+  transform: rotate(-45deg);
+}
+
+.button-outer.empty.icon-only {
+  width:60px;
+  height:60px;
+}
+
+.button-outer.empty.icon-only .button-inner svg {
+    font-size: 26px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.button-outer.disabled .button-inner {
+    background-color: #6b6b6b;
+    background-image: none;
+    color: #909090;
+    text-shadow: 0 2px 1px #969696;
+    box-shadow: none;
+    cursor: default;
+}
+
+
+
+/* class applies to select element itself, not a wrapper element */
+.select-css {
+    display: block;
+    font-size: 36px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #444;
+    line-height: 1.3;
+    padding: 0;
+    width: 100%;
+    max-width: 100%; /* useful when width is set to anything other than 100% */
+    box-sizing: border-box;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    appearance: none;
+    background-color: transparent;
+    outline: none;
+    padding-right: 20px;
+}
+
+/* Hide arrow icon in IE browsers */
+.select-css::-ms-expand {
+    display: none;
+}
+/* Hover style */
+.select-css:hover {
+    border-color: #888;
+}
+/* Focus style */
+.select-css:focus {
+    border-color: #aaa;
+    color: #222; 
+    outline: none;
+}
+
+/* Set options to normal weight */
+.select-css option {
+    font-weight:normal;
+}
+
