@@ -28,8 +28,6 @@ const switchProps = {
 		boxShadow: '0 0 5px 3px #1d1d3233',
 	}
 
-	// <span className="button" onClick={endTurn}> End Turn  <FontAwesomeIcon icon={faChevronRight} /> </span>
-
 const Game = ({location}) => {
 
 	let { room } = useParams();
