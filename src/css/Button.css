@@ -148,10 +148,10 @@
 }
 
 .button-outer.disabled .button-inner {
-    background-color: #6b6b6b;
+    background-color: #1d2350;
     background-image: none;
     color: #909090;
-    text-shadow: 0 2px 1px #969696;
+    text-shadow: none;
     box-shadow: none;
     cursor: default;
 }

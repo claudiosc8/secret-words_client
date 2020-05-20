@@ -1,7 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import io from 'socket.io-client';
-import InfoBar from './InfoBar'
-import Messages from './Messages'
 import Users from './Users'
 import Navbar from './Navbar'
 import Button from './Button'
@@ -235,13 +233,13 @@ const Game = ({location}) => {
 					<div className="bottom-bar">
 					<div>
 					 <div className="setting">
-													<label htmlFor="spymaster-switch">Spymaster's view</label> 
-													<Switch id='spymaster-switch' onChange={(e) => setSpymasterView(e)} checked={spymasterView} {...switchProps}/>
-												</div>
+						<label htmlFor="spymaster-switch">Spymaster's view</label> 
+						<Switch id='spymaster-switch' onChange={(e) => setSpymasterView(e)} checked={spymasterView} {...switchProps} disabled={puzzle.winner} />
+					</div>
 					</div>
 
 					<div className="center">
-						 <Button text={'End Turn'} onClick={endTurn} icon={faChevronRight} />
+						 <Button text={'End Turn'} onClick={endTurn} icon={faChevronRight} disabled={puzzle.winner} />
 					</div>
 					<div></div>
 					</div>
@@ -267,9 +265,7 @@ const Game = ({location}) => {
 					<SidebarSection title='Online players' className='online-users' scroll>
 						<Users users={users} me={user.name}/>
 					</SidebarSection>
-					<SidebarSection title='Game log' className='log-messages' scroll>
-						<Messages messages={puzzle.messages ? puzzle.messages : []} />
-					</SidebarSection>
+
 
 					<SidebarSection title='Language' variant='space-between' className="language-wrapper">
 						<select id="languages" className="select-css" defaultValue={language} onChange={e => setlanguage(e.target.value)}>
