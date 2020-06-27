@@ -9,7 +9,6 @@ A hosted version of the app is available at [claudioscotto.it/secret-words/](htt
 
 Backend repository [here](https://github.com/claudiosc8/secret-words_server).
 
-![Join screen](./public/preview-1.png)
 ![Game preview](./public/preview-2.png)
 
 **Every feedback is welcome!**
