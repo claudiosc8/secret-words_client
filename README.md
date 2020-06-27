@@ -1,3 +1,26 @@
+# Secret Words
+
+Secret Words is an online version of <a href="https://en.wikipedia.org/wiki/Codenames_(board_game)">Codenames</a> board game. 
+The game generates random words that are retrieved from a database. The user will choose if he plays as spymaster or as player.
+
+The app is developed in [React](https://reactjs.org).
+
+A hosted version of the app is available at [claudioscotto.it/secret-words/](https://claudioscotto.it/secret-words/).
+
+Backend repository [here](https://github.com/claudiosc8/secret-words_server).
+
+![Join screen](./public/preview-1.png)
+![Game preview](./public/preview-2.png)
+
+**Every feedback is welcome!**
+
+### Coming soon
+
+- Full support for Spanish and Italian language
+
+
+___________
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
