@@ -1,5 +1,5 @@
 import React from 'react';
-import SpymasterFill from '../img/crown.svg'
+import SpymasterFill from '../img/crown.png'
 
 const Users = ({users, me}) => {
 
