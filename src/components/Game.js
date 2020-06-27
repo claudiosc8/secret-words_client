@@ -232,10 +232,14 @@ const Game = ({location}) => {
 
 					<div className="bottom-bar">
 					<div>
-					 <div className="setting">
-						<label htmlFor="spymaster-switch">Spymaster's view</label> 
-						<Switch id='spymaster-switch' onChange={(e) => setSpymasterView(e)} checked={spymasterView} {...switchProps} disabled={puzzle.winner} />
-					</div>
+
+					 {user.spymaster &&
+				 	<div className="setting">
+ 						<label htmlFor="spymaster-switch">Spymaster's view</label> 
+ 						<Switch id='spymaster-switch' onChange={(e) => setSpymasterView(e)} checked={spymasterView} {...switchProps} disabled={puzzle.winner} />
+ 					</div>
+	 				}
+
 					</div>
 
 					<div className="center">
@@ -281,7 +285,7 @@ const Game = ({location}) => {
 					<div className={'sidebar-section'}>
 					<Button text={'New game'} onClick={newGame} className='fullwidth outline' />
 					
-					<a href='/'><Button className='fullwidth outline' text={'Leave room'} /></a>
+					<a href='/secret-words/'><Button className='fullwidth outline' text={'Leave room'} /></a>
 					</div>
 					<div className='sidebar-section copyright-section'>
 						<a href='http://claudioscotto.it' rel="noopener noreferrer" target="_blank" className='copyright'>©2020 - Claudio Scotto</a>
